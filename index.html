@@ -49,7 +49,15 @@
         weight: 0,
         opacity: 1,
         fillOpacity: 1
-    };       
+    };
+    var okregStyleWarn = {
+        radius: 6,
+        fillColor: "#F7AFF7",
+        color: "#F7AFF7",
+        weight: 0,
+        opacity: 1,
+        fillOpacity: 1
+    };           
     var poland, wojewodztwa, okregi,
         map = L.map('map', {
         center: [52.093, 19.577],
@@ -74,9 +82,17 @@
               okregi = L.geoJson(json, 
               {                
                   pointToLayer: function (featureData, latlng) {    
-                      var circle = new L.CircleMarker(latlng, okregStyle); 
-                      console.log(featureData.properties.title);
-                      circle.bindPopup(featureData.properties.title, popupProps);               
+                      var circle, popupInfo, style ;
+                      
+                      if (featureData.properties.description){
+                        style = okregStyleWarn;
+                        popupInfo = featureData.properties.title + "<br/>" + featureData.properties.description;
+                      } else {
+                        style = okregStyle;
+                        popupInfo = featureData.properties.title;
+                      }
+                      circle = new L.CircleMarker(latlng, style)
+                      circle.bindPopup(popupInfo, popupProps);               
                       return circle;
                   }
                 }
