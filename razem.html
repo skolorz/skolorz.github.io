@@ -17,48 +17,31 @@
             width: 600px;
             background-color: #fff;
         }
-        .okregPopup {}
     </style>
 </head>
 
 <body>
 <div id="map" style=""></div>
 <script>
-    var polandStyle = {
-    "color": "#500030",
-    "weight": 2,
-    "opacity": 0.6,
-    "fillOpacity": 0
-    };
-    var wojewodztwaStyle = {
-    "color": "#870F57",
-    "weight": 0.5,
-    "opacity": 0.3,
-    "fillOpacity": 0
-    };  
     var powiatyStyle = {
-    "color": "#870F57",
-    "weight": 0.3,
+    "color": "#500030",
+    "weight": 1,
     "opacity": 0.2,
     "fillOpacity": 0
-    };      
-    var okregStyle = {
-        radius: 6,
-        fillColor: "#870F57",
-        color: "#870F57",
-        weight: 0,
-        opacity: 1,
-        fillOpacity: 1
+    },
+    wojStyle = {
+    "color": "#500030",
+    "weight": 2,
+    "opacity": 0.4,
+    "fillOpacity": 0
+    },
+    okrStyle = {
+    "color": "#500030",
+    "weight": 1,
+    "opacity": 0.7,
+    "fillOpacity": 0
     };
-    var okregStyleWarn = {
-        radius: 6,
-        fillColor: "#F7AFF7",
-        color: "#F7AFF7",
-        weight: 0,
-        opacity: 1,
-        fillOpacity: 1
-    };           
-    var poland, wojewodztwa, okregi,
+    var powiaty,
         map = L.map('map', {
         center: [52.093, 19.577],
         minZoom: 1,
@@ -68,37 +51,20 @@
         touchZoom: false,
         zoomControl: false
     });
-    var popupProps = {closeButton: false,
-                      closeOnClick: true};
 
-    
-    $.getJSON("polska.json", function (json) {
-       poland = L.geoJson(json, {style: polandStyle}).addTo(map);
- 
     $.getJSON("wojewodztwa.json", function (json) {
-          wojewodztwa = L.geoJson(json, {style: wojewodztwaStyle}).addTo(map);
-        
-          $.getJSON("okregi.geojson", function (json) {
-              okregi = L.geoJson(json, 
-              {                
-                  pointToLayer: function (featureData, latlng) {    
-                      var circle, popupInfo, style ;
-                      
-                      if (featureData.properties.description){
-                        style = okregStyleWarn;
-                        popupInfo = featureData.properties.title + "<br/>" + featureData.properties.description;
-                      } else {
-                        style = okregStyle;
-                        popupInfo = featureData.properties.title;
-                      }
-                      circle = new L.CircleMarker(latlng, style)
-                      circle.bindPopup(popupInfo, popupProps);               
-                      return circle;
-                  }
-                }
-              ).addTo(map);
-          });    
-      });    
+       powiaty = L.geoJson(json, {style: wojStyle })
+                    .addTo(map);
+    });
+
+    $.getJSON("powiaty.json", function (json) {
+      powiaty = L.geoJson(json, {style: powiatyStyle})
+                    .addTo(map);
+    });
+
+    $.getJSON("razem.json", function (json) {
+      powiaty = L.geoJson(json, {style: okrStyle})
+                    .addTo(map);
     });
 </script>
 </body>
