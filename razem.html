@@ -18,8 +18,9 @@
             background-color: #fff;
             float: left
         }
-        #info {
+        #okreg {
             padding-top: 100px;
+            float: left
         }
         #ctrl{
         }
@@ -31,11 +32,19 @@
 </head>
 
 <body>
-
+    <h1> Okręgi Razem</h1>
 <div id="container" class="content-wrap">
     <div id="map"></div>
-    <div id="info" class=""></div>
-    <div id="powiat" class=""></div>
+    <div id="okreg" class="">
+        <h3 id="nazwa"></h3> 
+        <span id="linki">
+            <a id="www"></a>
+            <a id="fb"></a>
+            <a id="twitter"></a>
+        </span>
+        <h4 id="mailto"></h4> 
+        <h4 id="adres"></h4> 
+    </div>
     <hr style="width: 100%"/>
     <div id="ctrl">
         <form id="template" >
@@ -51,6 +60,11 @@
                     <label>waga</label>
                     </br>
                     <input type="range" min="1" max="10" value="0" class="slider"/>
+                </div>
+                <div class="color">
+                    <label>kolor</label>
+                    </br>
+                    <input type="text" />
                 </div>
                 </p>
             </div>
@@ -88,7 +102,9 @@ var styles = {};
     Object.assign(razemHoverStyle, styles["razem"]);
     razemHoverStyle .fillOpacity = 0.4;
 
-    var layers = {},
+    var daneAdresowe,
+        selected,
+        layers = {},
         map = L.map('map', {
         center: [52.093, 19.577],
         minZoom: 6,
@@ -102,25 +118,72 @@ var styles = {};
     function resetHighlight(config) {
         return function (e) {
             layers[config.layer].resetStyle(e.target);
-            $(config.el).empty();
         }
     }
 
-	function highlightFeature(config) {
-        return function (e) {
-            var target = e.target;
-            config.style &&  target.setStyle(config.style);
-            $(config.el).html(config.prefix + target.feature.properties[config.data] + config.suffix);
+	function highlightFeature(e) {
+        var target = e.target, dane, elem;
+        
+        $("#okreg").hide();
+        selected && layers["razem"].resetStyle(selected);
+        if (selected == target) {
+            selected = null;
+            return;
         }
-	}
+        selected = target;
+        target.setStyle(razemHoverStyle);
 
-    function defineHover(config) {
-        return function onEachFeature(feature, layer) {
-            layer.on({
-                    mouseover: highlightFeature(config),
-                    mouseout: resetHighlight(config)
-           });
+        $("#okreg #adres").empty();
+        $("#okreg #mailto").empty();
+        $("#okreg #linki #fb").empty();
+        $("#okreg #linki #twitter").empty();
+        $("#okreg #linki #www").empty();
+
+        dane = daneAdresowe["Okręg " + target.feature.properties.name]
+        if (dane){
+            $("#okreg #nazwa").text(dane.name);
+            if (dane.kontakt && dane.kontakt.length){
+            }
+            if (dane.adres){
+                $("#okreg #adres").html(dane.adres.replace(/(?:\r\n|\r|\n)+/g, "<br />"));
+            }
+
+            if (dane.mailto){
+                elem = document.createElement("a");
+                elem.href = "mailto:" + dane.mailto;
+                elem.text = dane.mailto;
+                $("#okreg #mailto").append(elem);
+            }
+
+            if (dane.fb){
+                elem = document.createElement("a");
+                elem.href = dane.fb;
+                elem.text = "fb";
+                $("#okreg #linki #fb").append(elem);
+            }
+            if (dane.twitter){
+                elem = document.createElement("a");
+                elem.href = "https://twitter.com/" + dane.twitter;
+                elem.text = "Twitter";
+                $("#okreg #linki #twitter").append(elem);
+            }
+            if (dane.www){
+                elem = document.createElement("a");
+                elem.href = dane.www;
+                elem.text = "WWW";
+
+                $("#okreg #linki #www").append(elem);
+            }
+        } else {
+            $("#okreg #nazwa").text(target.feature.properties.name);
         }
+        $("#okreg").show();
+    }
+
+    function onEachFeature(feature, layer) {
+        layer.on({
+                click: highlightFeature
+       });
     }
 
 function addLayer(json, style, onEachFeature) {
@@ -134,24 +197,15 @@ $.when(
         $.getJSON("polska.json"),
         $.getJSON("wojewodztwa.json"),
         $.getJSON("powiaty.json"),
-        $.getJSON("razem.json")
+        $.getJSON("razem.json"),
+        $.getJSON("dane-adresowe.json"),
         )
-    .then(function(polskaJson, wojewodztwaJson, powiatyJson, razemJson) {
-        var razemHover; 
-
-        razemHover = defineHover({
-                      el: "#info", 
-                      prefix: "<h3> Okręg ",
-                      suffix: "<h3>",
-                      data: "name",
-                      layer: "razem",
-                      style: razemHoverStyle
-                  }),
-
+    .then(function(polskaJson, wojewodztwaJson, powiatyJson, razemJson, daneAdresoweJson) {
+        daneAdresowe = daneAdresoweJson[0];
         layers["powiaty"] = addLayer(powiatyJson, styles["powiaty"] );
         layers["wojewodztwa"] = addLayer(wojewodztwaJson, styles["wojewodztwa"] );
         layers["polska"] = addLayer(polskaJson, styles["polska"] );
-        layers["razem"] = addLayer(razemJson, styles["razem"] , razemHover);
+        layers["razem"] = addLayer(razemJson, styles["razem"], onEachFeature);
 })
 .then(function () {
     function attachCtrls(id){
@@ -187,6 +241,13 @@ $.when(
             weightLbl.innerText = "waga: " + style.weight;
         });
 
+
+        color = form.find("div.color input");
+        color.val(style.color);
+        color.on("input", e => { 
+            style.color = color.val(); 
+            layer.setStyle(style);
+        });
     }
 
     attachCtrls("polska");
