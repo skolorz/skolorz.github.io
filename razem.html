@@ -7,7 +7,7 @@
     <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
     <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2'></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.5/jquery.min.js"></script>
     <style>
         #container {
             width: 100%;
@@ -21,6 +21,9 @@
         #okreg {
             padding-top: 100px;
             float: left
+        }
+        #okreg #linki a{
+            margin-right: 10px
         }
         #ctrl{
         }
@@ -37,13 +40,13 @@
     <div id="map"></div>
     <div id="okreg" class="">
         <h3 id="nazwa"></h3> 
+        <h5 id="miasto"></h4> 
         <span id="linki">
-            <a id="www"></a>
-            <a id="fb"></a>
-            <a id="twitter"></a>
         </span>
-        <h4 id="mailto"></h4> 
-        <h4 id="adres"></h4> 
+        <h5 id="kontakty"></h5> 
+        <h5 id="mailto"></h5> 
+        <h5 id="adres"></h5> 
+        <div id="sub"></div> 
     </div>
     <hr style="width: 100%"/>
     <div id="ctrl">
@@ -95,12 +98,12 @@ var styles = {};
     styles["razem"] = {
     "color": "#500030",
     "weight": 2,
-    "opacity": 0.4,
+    "opacity": 0.5,
     "fillOpacity": 0
     },
     razemHoverStyle = {};
     Object.assign(razemHoverStyle, styles["razem"]);
-    razemHoverStyle .fillOpacity = 0.4;
+    razemHoverStyle .fillOpacity = 0.5;
 
     var daneAdresowe,
         selected,
@@ -120,9 +123,61 @@ var styles = {};
             layers[config.layer].resetStyle(e.target);
         }
     }
+    function showOkreg($okreg, dane) {
+        var elem;
+
+        $okreg.find("#nazwa").text(dane.name);
+        if (dane.adres){
+            $okreg.find("#adres").html(dane.adres.replace(/(?:\r\n|\r|\n)+/g, "<br />"));
+        }
+
+        if (dane.miasto){
+            $okreg.find("#miasto").html(dane.miasto);
+        }
+
+        if (dane.mailto){
+            elem = document.createElement("a");
+            elem.href = "mailto:" + dane.mailto;
+            elem.text = dane.mailto;
+            $okreg.find("#mailto").append(elem);
+        }
+
+        if (dane.fb){
+            elem = document.createElement("a");
+            elem.href = dane.fb;
+            elem.text = "fb";
+            $okreg.find("#linki").append(elem);
+        }
+        if (dane.twitter){
+            elem = document.createElement("a");
+            elem.href = "https://twitter.com/" + dane.twitter;
+            elem.text = "Twitter";
+            $okreg.find("#linki").append(elem);
+        }
+        if (dane.www){
+            elem = document.createElement("a");
+            elem.href = dane.www;
+            elem.text = "WWW";
+
+            $okreg.find("#linki").append(elem);
+        }
+        if (dane.kontakt && dane.kontakt.length){
+            dane.kontakt.forEach(k => {
+                elem = document.createElement("span");
+                elem.innerText = k.role +", ";
+                $okreg.find("#kontakty").append(elem);
+
+                elem = document.createElement("a");
+                elem.href = k.tel;
+                elem.text = k.tel;
+                $okreg.find("#kontakty").append(elem);
+                $okreg.find("#kontakty").append("<br/>");
+            } );
+        }
+    }
 
 	function highlightFeature(e) {
-        var target = e.target, dane, elem;
+        var target = e.target, dane, $okreg;
         
         $("#okreg").hide();
         selected && layers["razem"].resetStyle(selected);
@@ -133,51 +188,32 @@ var styles = {};
         selected = target;
         target.setStyle(razemHoverStyle);
 
-        $("#okreg #adres").empty();
-        $("#okreg #mailto").empty();
-        $("#okreg #linki #fb").empty();
-        $("#okreg #linki #twitter").empty();
-        $("#okreg #linki #www").empty();
+        $okreg =  $("#okreg");
+        $okreg.children().empty();
 
         dane = daneAdresowe["Okręg " + target.feature.properties.name]
         if (dane){
-            $("#okreg #nazwa").text(dane.name);
-            if (dane.kontakt && dane.kontakt.length){
-            }
-            if (dane.adres){
-                $("#okreg #adres").html(dane.adres.replace(/(?:\r\n|\r|\n)+/g, "<br />"));
-            }
-
-            if (dane.mailto){
-                elem = document.createElement("a");
-                elem.href = "mailto:" + dane.mailto;
-                elem.text = dane.mailto;
-                $("#okreg #mailto").append(elem);
-            }
-
-            if (dane.fb){
-                elem = document.createElement("a");
-                elem.href = dane.fb;
-                elem.text = "fb";
-                $("#okreg #linki #fb").append(elem);
-            }
-            if (dane.twitter){
-                elem = document.createElement("a");
-                elem.href = "https://twitter.com/" + dane.twitter;
-                elem.text = "Twitter";
-                $("#okreg #linki #twitter").append(elem);
-            }
-            if (dane.www){
-                elem = document.createElement("a");
-                elem.href = dane.www;
-                elem.text = "WWW";
-
-                $("#okreg #linki #www").append(elem);
-            }
+            if (dane.sub && dane.sub.length) {
+                var subElements = dane.sub
+                    .map(s => { 
+                        var el = $okreg.clone(true, true); 
+                        el.attr("id", s);
+                        return {
+                            dane: daneAdresowe[s],
+                            el: el
+                        }
+                    });
+                subElements .forEach(s => {
+                    showOkreg(s.el, s.dane);
+                    $okreg.find("#sub").append(s.el)
+                    s.el.show();
+                });
+            };
+            showOkreg($okreg, dane);
         } else {
-            $("#okreg #nazwa").text(target.feature.properties.name);
+            $okreg.find("#nazwa").text(target.feature.properties.name);
         }
-        $("#okreg").show();
+        $okreg.show();
     }
 
     function onEachFeature(feature, layer) {

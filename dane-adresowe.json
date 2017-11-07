@@ -183,7 +183,7 @@
     "adres": "Partia Razem\nBiuro Okręgu Warszawskiego\n ul. Jezierskiego 7/LU 1\n 00-457 Warszawa"
   },
    "Legionowo, Nowy Dwór Mazowiecki": {
-    "name": "Koło Razem Legionowo, Nowy Dwór Mazowiecki",
+    "name": "Koło Razem",
     "miasto": "Legionowo, Nowy Dwór Mazowiecki",
     "mailto": "razem.legionowonowydwor@gmail.com",
     "kontakt": [
@@ -194,7 +194,7 @@
     ]
   },
   "Płock": {
-    "name": "Koło Razem Płock",
+    "name": "Koło Razem",
     "miasto": "Płock",
     "fb": "https://www.facebook.com/Razem.Plock/",
     "mailto": "",
@@ -254,7 +254,7 @@
     "sub": ["Kędzierzyn-Koźle"]
   },
   "Kędzierzyn-Koźle": {
-    "name": "Koło Razem Kędzierzyn-Koźle",
+    "name": "Koło Razem",
     "miasto": "Kędzierzyn-Koźle",
     "fb": "https://www.facebook.com/razemkedzierzynkozle/",
     "kontakt": [
@@ -480,24 +480,7 @@
   },
   "Okręg Poznański": {
     "name": "Okręg Poznański",
-    "sub": [
-      {
-        "name": "Koło Razem",
-        "miasto": "Gniezno",
-        "fb": "https://www.facebook.com/razemgniezno/"
-      },
-      {
-        "name": "Koło Razem",
-        "miasto": "Piła",
-        "fb": "https://www.facebook.com/razempila",
-        "kontakt": [
-          {
-            "role": "Koordynator: Bocian Kamil",
-            "tel": "tel:+48504356304"
-          }
-        ]
-      }
-    ],
+    "sub": ["Gniezno", "Piła"],
     "miasto": "Poznań",
     "www": "http://partiarazem.pl/poznan",
     "fb": "https://www.facebook.com/razempoznan/",
@@ -510,7 +493,28 @@
     ],
     "adres": "Partia Razem\nBiuro Okręgu Poznańskiego\nul. Klasztorna 24/25 \n61-779 Poznań"
   },
-  "Okręg Koniński": {
+  "Gniezno": {
+    "name": "Koło Razem",
+    "miasto": "Gniezno",
+    "fb": "https://www.facebook.com/razemgniezno/"
+  },
+  "Piła": {
+    "name": "Koło Razem",
+    "miasto": "Piła",
+    "fb": "https://www.facebook.com/razempila",
+    "kontakt": [
+      {
+        "role": "Koordynator: Bocian Kamil",
+        "tel": "tel:+48504356304"
+      }
+    ]
+  },
+  "Okręg Kaliski": {
+    "name": "Okręg Kaliski",
+    "miasto": "Kalisz",
+    "fb": "https://www.facebook.com/razemkalisz"
+  },
+  "Okręg Koniński": {
     "name": "Okręg Koniński",
     "miasto": "Konin",
     "fb": "https://www.facebook.com/razemkonin",
