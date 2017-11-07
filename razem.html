@@ -111,7 +111,7 @@ var styles = {};
         map = L.map('map', {
         center: [52.093, 19.577],
         minZoom: 6,
-        maxZoom: 16,
+        maxZoom: 6,
         zoom: 6,
         dragging: false,
         touchZoom: false,
@@ -191,7 +191,7 @@ var styles = {};
         $okreg =  $("#okreg");
         $okreg.children().empty();
 
-        dane = daneAdresowe["Okręg " + target.feature.properties.name]
+        dane = daneAdresowe["Okręg " + target.feature.properties.name] || daneAdresowe[target.feature.properties.name];
         if (dane){
             if (dane.sub && dane.sub.length) {
                 var subElements = dane.sub
@@ -233,7 +233,8 @@ $.when(
         $.getJSON("polska.json"),
         $.getJSON("wojewodztwa.json"),
         $.getJSON("powiaty.json"),
-        $.getJSON("razem.json"),
+        //$.getJSON("razem.json"),
+        $.getJSON("razem-kola.json"),
         $.getJSON("dane-adresowe.json"),
         )
     .then(function(polskaJson, wojewodztwaJson, powiatyJson, razemJson, daneAdresoweJson) {
