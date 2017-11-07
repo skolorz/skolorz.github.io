@@ -1,8 +1,6 @@
 {
-  "okregi": {},
   "Okręg Wrocławski": {
     "name": "Okręg Wrocławski",
-    "sub": [],
     "miasto": "Wrocław",
     "www": "http://wroclaw.partiarazem.pl/",
     "fb": "https://www.facebook.com/razem.wroclaw/",
@@ -17,7 +15,6 @@
   },
   "Okręg Legnicki": {
     "name": "Okręg Legnicki",
-    "sub": [],
     "miasto": "Legnica",
     "fb": "https://www.facebook.com/razem.legnica/",
     "mailto": "razem.legnica@gmail.com",
@@ -30,7 +27,6 @@
   },
   "Okręg Wałbrzyski": {
     "name": "Okręg Wałbrzyski",
-    "sub": [],
     "miasto": "Wałbrzych",
     "fb": "https://www.facebook.com/razem.walbrzych",
     "mailto": "",
@@ -43,15 +39,13 @@
   },
   "Okręg Karkonosko-Izerski": {
     "name": "Okręg Karkonosko-Izerski",
-    "sub": [],
     "miasto": "Karkonosze i Izery",
     "www": "http://oki.partiarazem.pl/",
     "fb": "https://www.facebook.com/razem.oki/",
     "mailto": ""
   },
-  "Okręg Toruńsko-Włocławski": {
-    "name": "Okręg Toruńsko-Włocławski",
-    "sub": [],
+  "Okręg Toruński": {
+    "name": "Okręg Toruński",
     "miasto": "Toruń, Włocławek",
     "www": "http://torun.partiarazem.pl/",
     "fb": "http://www.facebook.com/razemtorun/",
@@ -65,7 +59,6 @@
   },
   "Okręg Bydgoski": {
     "name": "Okręg Bydgoski",
-    "sub": [],
     "miasto": "Bydgoszcz",
     "fb": "https://www.facebook.com/razembydgoszcz/",
     "mailto": "razem.kujawy@gmail.com",
@@ -78,7 +71,6 @@
   },
   "Okręg Lubelski": {
     "name": "Okręg Lubelski",
-    "sub": [],
     "miasto": "Lublin",
     "www": "http://lublin.partiarazem.pl/",
     "fb": "https://www.facebook.com/razem.lubelskie/",
@@ -91,16 +83,14 @@
       }
     ]
   },
-  "Okręg Gorzowski": {
+  "Okręg Gorzowski": {
     "name": "Okręg Gorzowski",
-    "sub": [],
     "miasto": "Gorzów Wielkopolski",
     "mailto": "razem.gorzow@gmail.com",
     "fb": "https://www.facebook.com/RazemGorzow"
   },
   "Okręg Zielonogórski": {
     "name": "Okręg Zielonogórski",
-    "sub": [],
     "miasto": "Zielona Góra",
     "fb": "https://www.facebook.com/RazemLubuskie",
     "mailto": "razem.zielonagora@gmail.com",
@@ -110,24 +100,13 @@
         "tel": "tel:+48600003978"
       },
       {
-        "role": "Rzecznik Prasowy: Dawid Kotlarek",
+        "role": "Koordynator: Piotr Herrmann-Jankowski",
         "tel": "tel:+48516738418"
       }
     ]
   },
   "Okręg Łódzki": {
     "name": "Okręg Łódzki",
-    "sub": [
-      {
-        "miasto": "Piotrków Trybunalski",
-        "kontakt": [
-          {
-            "role": "Koordynatorka: Monika Sulka",
-            "tel": "tel:+48511715771"
-          }
-        ]
-      }
-    ],
     "miasto": "Łódź",
     "www": "http://lodz.partiarazem.pl/",
     "fb": "https://www.facebook.com/razem.skierniewice/",
@@ -142,34 +121,40 @@
         "tel": "tel:+48661093639"
       }
     ],
-    "adres": "Partia Razem\nBiuro Okręgu Łódzkiego\nPiotrkowska 88 LU11\n90-103 Łódź"
+    "adres": "Partia Razem\nBiuro Okręgu Łódzkiego\nPiotrkowska 88 LU11\n90-103 Łódź",
+    "sub": [ "Piotrków Trybunalski"]
+  },
+  "Piotrków Trybunalski": {
+    "miasto": "Piotrków Trybunalski",
+    "kontakt": [
+      {
+        "role": "Koordynatorka: Monika Sulka",
+        "tel": "tel:+48511715771"
+      }
+    ]
   },
   "Okręg Skierniewicki": {
     "name": "Okręg Skierniewicki",
-    "sub": [],
     "mailto": "razem.skierniewice@gmail.com",
     "miasto": "Skierniewice",
     "fb": "https://www.facebook.com/razem.skierniewice/"
   },
   "Okręg Krakowski": {
     "name": "Okręg Krakowski",
-    "sub": [
-      {
-        "name": "Koło Razem",
-        "miasto": "Nowy Sącz",
-        "fb": "https://www.facebook.com/RazemNowySacz/"
-      }
-    ],
+    "sub": ["Nowy Sącz"],
     "miasto": "Kraków",
     "www": "http://partiarazem.pl/krakow",
     "fb": "https://www.facebook.com/razemmalopolska/",
     "mailto": "razem.krakow.zarzad@gmail.com",
     "adres": "Partia Razem\nBiuro Okręgu Krakowskiego\nSpółdzielnia Ogniwo\nul. Paulińska 28\n31-065 Kraków"
   },
+   "Nowy Sącz": {
+    "name": "Koło Razem",
+    "miasto": "Nowy Sącz",
+    "fb": "https://www.facebook.com/RazemNowySacz/"
+  },
   "Okręg Tarnowski": {
     "name": "Okręg Tarnowski",
-    "sub": [
-    ],
     "miasto": "Tarnów",
     "www": "http://partiarazem.pl/tarnow",
     "fb": "https://www.facebook.com/razemtarnow",
@@ -183,31 +168,7 @@
   },
   "Okręg Warszawski": {
     "name": "Okręg Warszawski",
-    "sub": [
-      {
-        "name": "Koło Razem",
-        "miasto": "Legionowo, Nowy Dwór Mazowiecki",
-        "mailto": "razem.legionowonowydwor@gmail.com",
-        "kontakt": [
-          {
-            "role": "koordynator: Mateusz Szymański",
-            "tel": "tel:+48660267733"
-          }
-        ]
-      },
-      {
-        "name": "Koło Razem",
-        "miasto": "Płock",
-        "fb": "https://www.facebook.com/Razem.Plock/",
-        "mailto": "",
-        "kontakt": [
-          {
-            "role": "koordynator: Mateusz Dobrowolski",
-            "tel": "tel:+48792024754"
-          }
-        ]
-      }
-    ],
+    "sub": ["Legionowo, Nowy Dwór Mazowiecki", "Płock"],
     "miasto": "Warszawa",
     "www": "http://warszawa.partiarazem.pl/",
     "fb": "https://www.facebook.com/RazemwWarszawie/",
@@ -221,9 +182,31 @@
     ],
     "adres": "Partia Razem\nBiuro Okręgu Warszawskiego\n ul. Jezierskiego 7/LU 1\n 00-457 Warszawa"
   },
+   "Legionowo, Nowy Dwór Mazowiecki": {
+    "name": "Koło Razem Legionowo, Nowy Dwór Mazowiecki",
+    "miasto": "Legionowo, Nowy Dwór Mazowiecki",
+    "mailto": "razem.legionowonowydwor@gmail.com",
+    "kontakt": [
+      {
+        "role": "koordynator: Mateusz Szymański",
+        "tel": "tel:+48660267733"
+      }
+    ]
+  },
+  "Płock": {
+    "name": "Koło Razem Płock",
+    "miasto": "Płock",
+    "fb": "https://www.facebook.com/Razem.Plock/",
+    "mailto": "",
+    "kontakt": [
+      {
+        "role": "koordynator: Mateusz Dobrowolski",
+        "tel": "tel:+48792024754"
+      }
+    ]
+  },
   "Okręg Grójecko-Piaseczyński": {
     "name": "Okręg Grójecko-Piaseczyński",
-    "sub": [],
     "miasto": "Grójec, Piaseczno",
     "fb": "https://www.facebook.com/razem.gp/",
     "mailto": "",
@@ -236,17 +219,7 @@
   },
   "Okręg Mazowsze Zachodnie": {
     "name": "Okręg Mazowsze Zachodnie",
-    "sub": [
-      {
-        "miasto": "Żyrardów",
-        "kontakt": [
-          {
-            "role": "Koordynator: Zbigniew Hakobert",
-            "tel": "tel:+48692696027"
-          }
-        ]
-      }
-    ],
+    "sub": ["Żyrardów"],
     "miasto": "Pruszków, Grodzisk Mazowiecki",
     "www": "http://mazowsze-zach.partiarazem.pl/",
     "fb": "https://www.facebook.com/razem.mz/",
@@ -255,6 +228,15 @@
       {
         "role": "Rzecznik Prasowy: Przemysław Nowak",
         "tel": "tel:+48607313356"
+      }
+    ]
+  },
+  "Żyrardów": {
+    "miasto": "Żyrardów",
+    "kontakt": [
+      {
+        "role": "Koordynator: Zbigniew Hakobert",
+        "tel": "tel:+48692696027"
       }
     ]
   },
@@ -269,17 +251,16 @@
         "tel": "tel:+48602780773"
       }
     ],
-    "sub": [
+    "sub": ["Kędzierzyn-Koźle"]
+  },
+  "Kędzierzyn-Koźle": {
+    "name": "Koło Razem Kędzierzyn-Koźle",
+    "miasto": "Kędzierzyn-Koźle",
+    "fb": "https://www.facebook.com/razemkedzierzynkozle/",
+    "kontakt": [
       {
-        "name": "Koło Razem",
-        "miasto": "Kędzierzyn-Koźle",
-        "fb": "https://www.facebook.com/razemkedzierzynkozle/",
-        "kontakt": [
-          {
-            "role": "Koordynatorka: Sabina Faron",
-            "tel": "tel:+48530265550"
-          }
-        ]
+        "role": "Koordynatorka: Sabina Faron",
+        "tel": "tel:+48530265550"
       }
     ]
   },
@@ -298,7 +279,6 @@
   },
   "Okręg Rzeszowski": {
     "name": "Okręg Rzeszowski",
-    "sub": [],
     "miasto": "Rzeszów",
     "fb": "https://www.facebook.com/razem.podkarpackie/",
     "mailto": "razem.podkarpackie@gmail.com",
@@ -306,14 +286,12 @@
   },
   "Okręg Mielecki": {
     "name": "Okręg Mielecki",
-    "sub": [],
     "miasto": "Mielec",
     "mailto": "",
     "fb": "https://www.facebook.com/razem.mielec/"
   },
   "Okręg Przemyski": {
     "name": "Okręg Przemyski",
-    "sub": [],
     "miasto": "Przemyśl",
     "fb": "https://www.facebook.com/razemprzemysl/",
     "mailto": "",
@@ -326,7 +304,6 @@
   },
   "Okręg Bieszczadzki": {
     "name": "Okręg Bieszczadzki",
-    "sub": [],
     "miasto": "Sanok",
     "www": "http://bieszczady.partiarazem.pl/",
     "fb": "https://www.facebook.com/razembieszczady/",
@@ -340,10 +317,6 @@
   },
   "Okręg Białostocki": {
     "name": "Okręg Białostocki",
-    "sub": [
-      {
-      }
-    ],
     "miasto": "Białystok",
     "www": "http://podlaskie.partiarazem.pl/kontakt/",
     "fb": "https://www.facebook.com/razempodlaskie",
@@ -364,7 +337,6 @@
         "tel": "tel:+48605749885"
       }
     ],
-    "sub": [],
     "miasto": "Gdańsk",
     "www": "http://partiarazem.pl/gdansk",
     "mailto": "",
@@ -378,7 +350,6 @@
         "tel": "tel:+48605749885"
       }
     ],
-    "sub": [],
     "miasto": "Gdynia",
     "www": "http://partiarazem.pl/gdynia",
     "mailto": "",
@@ -386,27 +357,13 @@
   },
   "Okręg Słupski": {
     "name": "Okręg Słupski",
-    "sub": [],
     "miasto": "Słupsk",
     "mailto": "",
     "www": "http://partiarazem.pl/slupsk"
   },
   "Okręg Podbeskidzie": {
     "name": "Okręg Podbeskidzie",
-    "sub": [
-      {
-        "miasto": "Cieszyn",
-        "kontakt": [
-          {
-            "role": "Koordynatorka: Agnieszka Lamek–Kochanowska",
-            "tel": "tel:+48697797908"
-          }
-        ]
-      },
-      {
-        "miasto": "Żywiec"
-      }
-    ],
+    "sub": ["Cieszyn", "Żywiec"],
     "miasto": "Bielsko-Biała",
     "www": "http://podbeskidzie.partiarazem.pl/",
     "fb": "https://www.facebook.com/RazemPodbeskidzie/",
@@ -419,9 +376,21 @@
     ],
     "adres": "Partia Razem\nBiuro Okręgu Podbeskidzie\nul. Barlickiego 22,\n43–300 Bielsko–Biała"
   },
+  "Cieszyn": {
+    "miasto": "Cieszyn",
+    "kontakt": [
+      {
+        "role": "Koordynatorka: Agnieszka Lamek–Kochanowska",
+        "tel": "tel:+48697797908"
+      }
+    ]
+  },
+  "Żywiec":  {
+    "miasto": "Żywiec",
+    "mailto": "razem.zywiec@gmail.com"
+  },
   "Okręg Częstochowski": {
     "name": "Okręg Częstochowski",
-    "sub": [],
     "miasto": "Częstochowa",
     "www": "http://czestochowa.partiarazem.pl/",
     "fb": "https://www.facebook.com/razemczestochowa/",
@@ -435,8 +404,20 @@
   },
   "Okręg Katowicki": {
     "name": "Okręg Katowicki",
-    "sub": [
+    "sub": ["Rybnik"],
+    "miasto": "Katowice, Gliwice, Zabrze",
+    "www": "http://partiarazem.pl/katowice",
+    "fb": "https://www.facebook.com/razem.slask",
+    "mailto": "",
+    "kontakt": [
       {
+        "role": "Rzeczniczka Prasowa: Arnika Kluska",
+        "tel": "tel:+48795924816"
+      }
+    ],
+    "adres": "Partia Razem\nBiuro Śląskie\n ul. Andrzeja 13/1\n 40-061 Katowice"
+  },
+  "Rybnik": {
         "miasto": "Rybnik, Jastrzębie Zdrój, Racibórz",
         "kontakt": [
           {
@@ -444,23 +425,9 @@
             "tel": "tel:+48693110593"
           }
         ]
-      }
-    ],
-    "miasto": "Okręg Katowicki   ",
-    "www": "http://partiarazem.pl/katowice",
-    "fb": "https://www.facebook.com/razem.slask",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Katowice, Gliwice, Zabrze",
-        "tel": "tel:+48795924816"
-      }
-    ],
-    "adres": "Partia Razem\nBiuro Śląskie\n ul. Andrzeja 13/1\n 40-061 Katowice"
   },
-  "Okręg Sosnowiecki": {
+  "Okręg Sosnowiecki": {
     "name": "Okręg Sosnowiecki",
-    "sub": [],
     "miasto": "Sosnowiec",
     "www": "http://sosnowiec.partiarazem.pl/",
     "fb": "https://www.facebook.com/razem.zaglebie/",
@@ -475,7 +442,6 @@
   },
   "Okręg Świętokrzyski": {
     "name": "Okręg Świętokrzyski",
-    "sub": [],
     "miasto": "Kielce",
     "www": "http://kielce.partiarazem.pl/",
     "fb": "https://www.facebook.com/swietokrzyskie.razem",
@@ -488,34 +454,29 @@
     ],
     "adres": "Partia Razem\nBiuro Okręgu Świętokrzyskiego\nBecher Platinum, \nAleja IX Wieków Kielc 6/8\n25-516 Kielce\ndyżury: piątek 18:00 – 20:00"
   },
-  "Okręg Warmińsko-Mazurski": {
-    "name": "Okręg Warmińsko-Mazurski",
-    "sub": [
+  "Okręg Olsztyński": {
+    "name": "Okręg Olsztyński",
+    "miasto": "Olsztyn",
+    "kontakt": [
       {
-        "miasto": "Olsztyn",
-        "kontakt": [
-          {
-            "role": "Rzeczniczka Prasowa: Małgorzata Matuszewska-Boruc",
-            "tel": "tel:+48793131261"
-          }
-        ]
-      },
-      {
-        "miasto": "Elbląg",
-        "mailto": "razem.elblag@gmail.com",
-        "kontakt": [
-          {
-            "role": "Koordynator: Marcin Gulczyński",
-            "tel": "tel:+48790568147"
-          }
-        ]
+        "role": "Rzeczniczka Prasowa: Małgorzata Matuszewska-Boruc",
+        "tel": "tel:+48793131261"
       }
     ],
-    "miasto": "Okręg Warmińsko-Mazurski   ",
     "www": "http://partiarazem.pl/olsztyn/",
     "fb": "https://www.facebook.com/razemwarminskomazurskie/",
-    "mailto": "",
-    "adres": "Partia Razem\nBiuro Okręgu Warmińsko-Mazurskiego\nIzba Rzemiosła\nul. Kołłątaja 5, lok. 321 [III piętro]\n10-034 Olsztyn\notwarte:\nwtorki – 15:30-19:00\nczwartki – 10:30-12:30"
+    "adres": "Partia Razem\nBiuro Okręgu Warmińsko-Mazurskiego\nIzba Rzemiosła\nul. Kołłątaja 5, lok. 321 [III piętro]\n10-034 Olsztyn\notwarte:\nwtorki – 15:30-19:00\nczwartki – 10:30-12:30",
+    "sub": ["Elbląg"]
+  },
+  "Elbląg": {
+    "miasto": "Elbląg",
+    "mailto": "razem.elblag@gmail.com",
+    "kontakt": [
+      {
+        "role": "Koordynator: Marcin Gulczyński",
+        "tel": "tel:+48790568147"
+      }
+    ]
   },
   "Okręg Poznański": {
     "name": "Okręg Poznański",
@@ -551,7 +512,6 @@
   },
   "Okręg Koniński": {
     "name": "Okręg Koniński",
-    "sub": [],
     "miasto": "Konin",
     "fb": "https://www.facebook.com/razemkonin",
     "mailto": "",
@@ -562,10 +522,13 @@
       }
     ]
   },
+  "Okręg Koszaliński": {
+    "name": "Okręg Koszaliński",
+    "miasto": "Koszalin",
+    "mailto": "razem.koszalin@gmail.com"
+  },
   "Okręg Szczeciński": {
     "name": "Okręg Szczeciński",
-    "sub": [
-    ],
     "miasto": "Szczecin",
     "www": "http://szczecin.partiarazem.pl/",
     "fb": "https://www.facebook.com/partia.razem.szczecin",
