@@ -9,7 +9,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.5/jquery.min.js"></script>
     <style>
-        #container {
+        #map-container {
             width: 100%;
         }
         #map {
@@ -36,265 +36,20 @@
 
 <body>
     <h1> Okręgi Razem</h1>
-<div id="container" class="content-wrap">
-    <div id="map"></div>
-    <div id="okreg" class="">
-        <h3 id="nazwa"></h3> 
-        <h5 id="miasto"></h4> 
-        <span id="linki">
-        </span>
-        <h5 id="kontakty"></h5> 
-        <h5 id="mailto"></h5> 
-        <h5 id="adres"></h5> 
-        <div id="sub"></div> 
+    <div id="map-container" class="content-wrap">
+        <div id="map"></div>
+        <div id="okreg" class="">
+            <h3 id="nazwa"></h3> 
+            <h5 id="miasto"></h4> 
+            <span id="linki">
+            </span>
+            <h5 id="kontakty"></h5> 
+            <h5 id="mailto"></h5> 
+            <h5 id="adres"></h5> 
+            <div id="sub"></div> 
+        </div>
     </div>
-    <hr style="width: 100%"/>
-    <div id="ctrl">
-        <form id="template" >
-            <div class="form-container">
-                <p>
-                <h2></h2>
-                <div class="opacity">
-                    <label>nieprzezroczystość</label>
-                    </br>
-                    <input type="range" min="0" max="10" value="0" class="slider"/>
-                </div>
-                <div class="weight">
-                    <label>waga</label>
-                    </br>
-                    <input type="range" min="1" max="10" value="0" class="slider"/>
-                </div>
-                <div class="color">
-                    <label>kolor</label>
-                    </br>
-                    <input type="text" />
-                </div>
-                </p>
-            </div>
-        </form>
-    </div>
-</div>
 
-<script>
-var styles = {}; 
-    styles["polska"] = {
-    "color": "#777777",
-    "weight": 3,
-    "opacity": 1,
-    "fillOpacity": 0
-    },
-    styles["wojewodztwa"] = {
-    "color": "#999999",
-    "weight": 2,
-    "opacity": 0.8,
-    "fillOpacity": 0
-    },
-    styles["powiaty"] = {
-    "color": "#999999",
-    "weight": 1,
-    "opacity": 0.6,
-    "fillOpacity": 0
-    },
-    styles["razem"] = {
-    "color": "#500030",
-    "weight": 2,
-    "opacity": 0.5,
-    "fillOpacity": 0
-    },
-    razemHoverStyle = {};
-    Object.assign(razemHoverStyle, styles["razem"]);
-    razemHoverStyle .fillOpacity = 0.5;
-
-    var daneAdresowe,
-        selected,
-        layers = {},
-        map = L.map('map', {
-        center: [52.093, 19.577],
-        minZoom: 6,
-        maxZoom: 6,
-        zoom: 6,
-        dragging: false,
-        touchZoom: false,
-        zoomControl: false
-    });
-
-    function resetHighlight(config) {
-        return function (e) {
-            layers[config.layer].resetStyle(e.target);
-        }
-    }
-    function showOkreg($okreg, dane) {
-        var elem;
-
-        $okreg.find("#nazwa").text(dane.name);
-        if (dane.adres){
-            $okreg.find("#adres").html(dane.adres.replace(/(?:\r\n|\r|\n)+/g, "<br />"));
-        }
-
-        if (dane.miasto){
-            $okreg.find("#miasto").html(dane.miasto);
-        }
-
-        if (dane.mailto){
-            elem = document.createElement("a");
-            elem.href = "mailto:" + dane.mailto;
-            elem.text = dane.mailto;
-            $okreg.find("#mailto").append(elem);
-        }
-
-        if (dane.fb){
-            elem = document.createElement("a");
-            elem.href = dane.fb;
-            elem.text = "fb";
-            $okreg.find("#linki").append(elem);
-        }
-        if (dane.twitter){
-            elem = document.createElement("a");
-            elem.href = "https://twitter.com/" + dane.twitter;
-            elem.text = "Twitter";
-            $okreg.find("#linki").append(elem);
-        }
-        if (dane.www){
-            elem = document.createElement("a");
-            elem.href = dane.www;
-            elem.text = "WWW";
-
-            $okreg.find("#linki").append(elem);
-        }
-        if (dane.kontakt && dane.kontakt.length){
-            dane.kontakt.forEach(k => {
-                elem = document.createElement("span");
-                elem.innerText = k.role +", ";
-                $okreg.find("#kontakty").append(elem);
-
-                elem = document.createElement("a");
-                elem.href = k.tel;
-                elem.text = k.tel;
-                $okreg.find("#kontakty").append(elem);
-                $okreg.find("#kontakty").append("<br/>");
-            } );
-        }
-    }
-
-	function highlightFeature(e) {
-        var target = e.target, dane, $okreg;
-        
-        $("#okreg").hide();
-        selected && layers["razem"].resetStyle(selected);
-        if (selected == target) {
-            selected = null;
-            return;
-        }
-        selected = target;
-        target.setStyle(razemHoverStyle);
-
-        $okreg =  $("#okreg");
-        $okreg.children().empty();
-
-        dane = daneAdresowe["Okręg " + target.feature.properties.name] || daneAdresowe[target.feature.properties.name];
-        if (dane){
-            if (dane.sub && dane.sub.length) {
-                var subElements = dane.sub
-                    .map(s => { 
-                        var el = $okreg.clone(true, true); 
-                        el.attr("id", s);
-                        return {
-                            dane: daneAdresowe[s],
-                            el: el
-                        }
-                    });
-                subElements .forEach(s => {
-                    showOkreg(s.el, s.dane);
-                    $okreg.find("#sub").append(s.el)
-                    s.el.show();
-                });
-            };
-            showOkreg($okreg, dane);
-        } else {
-            $okreg.find("#nazwa").text(target.feature.properties.name);
-        }
-        $okreg.show();
-    }
-
-    function onEachFeature(feature, layer) {
-        layer.on({
-                click: highlightFeature
-       });
-    }
-
-function addLayer(json, style, onEachFeature) {
-      return L.geoJson(json, {
-                  style: style,
-                  onEachFeature: onEachFeature 
-      }).addTo(map);
-}
-
-$.when(
-        $.getJSON("polska.json"),
-        $.getJSON("wojewodztwa.json"),
-        $.getJSON("powiaty.json"),
-        //$.getJSON("razem.json"),
-        $.getJSON("razem-kola.json"),
-        $.getJSON("dane-adresowe.json"),
-        )
-    .then(function(polskaJson, wojewodztwaJson, powiatyJson, razemJson, daneAdresoweJson) {
-        daneAdresowe = daneAdresoweJson[0];
-        layers["powiaty"] = addLayer(powiatyJson, styles["powiaty"] );
-        layers["wojewodztwa"] = addLayer(wojewodztwaJson, styles["wojewodztwa"] );
-        layers["polska"] = addLayer(polskaJson, styles["polska"] );
-        layers["razem"] = addLayer(razemJson, styles["razem"], onEachFeature);
-})
-.then(function () {
-    function attachCtrls(id){
-        var form, opacity, opacityLbl,weight, weightLbl, 
-            layer = layers[id],
-            style = styles[id];
-
-        form = $("#template").clone(true, true);
-        form.attr("id", id);
-        form.appendTo("#ctrl");
-        form = $("#"+id);
-        form.attr("display", "block");
-        form.find("h2")[0].innerText = id;
-
-        opacity = form.find("div.opacity input");
-        opacity.attr("id", id + "-opacity");
-        opacityLbl = form.find("div.opacity label")[0];
-        opacity.val(style.opacity * 10);
-        opacityLbl.innerText = "nieprzezroczystość: " + style.opacity;
-        opacity.on("input", e => { 
-            style.opacity = opacity.val()/10; 
-            layer.setStyle(style);
-            opacityLbl.innerText = "nieprzezroczystość: " + style.opacity;
-        });
-
-        weight = form.find("div.weight input");
-        weightLbl = form.find("div.weight label")[0];
-        weight.val(style.weight * 2);
-        weightLbl.innerText = "waga: " + style.weight;
-        weight.on("input", e => { 
-            style.weight = weight.val() / 2; 
-            layer.setStyle(style);
-            weightLbl.innerText = "waga: " + style.weight;
-        });
-
-
-        color = form.find("div.color input");
-        color.val(style.color);
-        color.on("input", e => { 
-            style.color = color.val(); 
-            layer.setStyle(style);
-        });
-    }
-
-    attachCtrls("polska");
-    attachCtrls("wojewodztwa");
-    attachCtrls("powiaty");
-    attachCtrls("razem");
-    $("#template").hide();
-});
-
-
-</script>
+    <script type='text/javascript' src='mapa.js'></script>
 </body>
 </html>
