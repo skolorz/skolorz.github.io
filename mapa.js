@@ -151,12 +151,16 @@ function addLayer(json, style, onEachFeature) {
       }).addTo(map);
 }
 
-var layersPromise = $.when(
+var razemJson = "razem.json", layersPromise;
+
+if (window.location.href.match(/kola=true/)) {
+    razemJson = "razem-kola.json"
+}
+layersPromise = $.when(
         $.getJSON("polska.json"),
         $.getJSON("wojewodztwa.json"),
         $.getJSON("powiaty.json"),
-        //$.getJSON("razem.json"),
-        $.getJSON("razem-kola.json"),
+        $.getJSON(razemJson),
         $.getJSON("dane-adresowe.json"),
         )
     .then(function(polskaJson, wojewodztwaJson, powiatyJson, razemJson, daneAdresoweJson) {
