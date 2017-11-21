@@ -23,12 +23,22 @@ var styles = {};
     "opacity": 0.5,
     "fillOpacity": 0
     },
+    styles["razemKola"] = {
+    "color": "#500030",
+    "weight": 1,
+    "opacity": 0.8,
+    "fillOpacity": 0
+    },
     razemHoverStyle = {};
     Object.assign(razemHoverStyle, styles["razem"]);
-    razemHoverStyle .fillOpacity = 0.5;
+    razemHoverStyle.fillOpacity = 0.5;
+    razemHoverSoftStyle = {};
+    Object.assign(razemHoverSoftStyle, styles["razem"]);
+    razemHoverSoftStyle.fillOpacity = 0.2;
 
     var daneAdresowe,
         selected,
+        selectedParent,
         layers = {},
         map = L.map('map', {
         center: [52.093, 19.577],
@@ -45,7 +55,7 @@ var styles = {};
             layers[config.layer].resetStyle(e.target);
         }
     }
-    function showOkreg($okreg, dane) {
+    function showOkreg($okreg, dane, feature) {
         var elem;
 
         $okreg.find("#nazwa").text(dane.name);
@@ -96,6 +106,9 @@ var styles = {};
                 $okreg.find("#kontakty").append("<br/>");
             } );
         }
+        if (feature && feature.properties.powiaty.length){
+                $okreg.find("#powiaty").append("<small>powiaty: " + feature.properties.powiaty.join(", ") + "</small>");
+        }
     }
 
 	function highlightFeature(e) {
@@ -103,12 +116,23 @@ var styles = {};
         
         $("#okreg").hide();
         selected && layers["razem"].resetStyle(selected);
+        selectedParent && layers["razem"].resetStyle(selectedParent);
         if (selected == target) {
             selected = null;
             return;
         }
         selected = target;
+        selectedParent = null;
+
         target.setStyle(razemHoverStyle);
+        if (selected.feature.properties["koło"]) {
+            layers["razem"].eachLayer(f => {
+                if (f.feature.properties.name === selected.feature.properties["okręg"]) {
+                    selectedParent = f;
+                    f.setStyle(razemHoverSoftStyle);
+                }
+            });
+        }
 
         $okreg =  $("#okreg");
         $okreg.children().empty();
@@ -131,7 +155,7 @@ var styles = {};
                     s.el.show();
                 });
             };
-            showOkreg($okreg, dane);
+            showOkreg($okreg, dane, selected.feature);
         } else {
             $okreg.find("#nazwa").text(target.feature.properties.name);
         }
@@ -156,17 +180,20 @@ var razemJson = "razem.json", layersPromise;
 if (window.location.href.match(/kola=true/)) {
     razemJson = "razem-kola.json"
 }
+
 layersPromise = $.when(
         $.getJSON("polska.json"),
         $.getJSON("wojewodztwa.json"),
         $.getJSON("powiaty.json"),
-        $.getJSON(razemJson),
+        $.getJSON("razem.json"),
+        $.getJSON("razem-kola.json"),
         $.getJSON("dane-adresowe.json"),
-        )
-    .then(function(polskaJson, wojewodztwaJson, powiatyJson, razemJson, daneAdresoweJson) {
+    )
+    .then(function(polskaJson, wojewodztwaJson, powiatyJson, razemJson, razemKolaJson, daneAdresoweJson) {
         daneAdresowe = daneAdresoweJson[0];
         layers["powiaty"] = addLayer(powiatyJson, styles["powiaty"] );
         layers["wojewodztwa"] = addLayer(wojewodztwaJson, styles["wojewodztwa"] );
         layers["polska"] = addLayer(polskaJson, styles["polska"] );
         layers["razem"] = addLayer(razemJson, styles["razem"], onEachFeature);
+        layers["razemKola"] = addLayer(razemKolaJson, styles["razemKola"], onEachFeature);
 });
