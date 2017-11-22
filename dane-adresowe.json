@@ -1,553 +1,513 @@
-{
-  "Okręg Wrocławski": {
-    "name": "Okręg Wrocławski",
-    "miasto": "Wrocław",
-    "www": "http://wroclaw.partiarazem.pl/",
-    "fb": "https://www.facebook.com/razem.wroclaw/",
-    "mailto": "wroclaw@partiarazem.pl",
-    "kontakt": [
-      {
-        "role": "Rzeczniczka Prasowa: Magdalena Owczarek",
-        "tel": "tel:+48695669240"
-      }
-    ],
-    "adres": "Partia Razem\nBiuro Okręgu Wrocławskiego\nSpołem PSS „Feniks”\n ul. Szewska 75/77 LU34\n 50-121 Wrocław"
+[
+  {
+    "województwo": "dolnośląskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Karkonosko-Izerski",
+    "miasto": "Karkonosze i Izery",
+    "www": "http://oki.partiarazem.pl/",
+    "fb": "https://www.facebook.com/razem.oki/"
   },
-  "Okręg Legnicki": {
-    "name": "Okręg Legnicki",
+  {
+    "województwo": "dolnośląskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Legnicki",
     "miasto": "Legnica",
     "fb": "https://www.facebook.com/razem.legnica/",
     "mailto": "razem.legnica@gmail.com",
-    "kontakt": [
-      {
-        "role": "Rzecznik Prasowy: Damian Cacek",
-        "tel": "tel:+48793958890"
-      }
-    ]
+    "rzecznik_czka": "Damian Cacek",
+    "rzecz.Płeć": "m",
+    "rzecz.Tel": "tel:+48793958890"
   },
-  "Okręg Wałbrzyski": {
-    "name": "Okręg Wałbrzyski",
+  {
+    "województwo": "dolnośląskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Wałbrzyski",
     "miasto": "Wałbrzych",
     "fb": "https://www.facebook.com/razem.walbrzych",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Rzecznik Prasowy: Daniel Tokar",
-        "tel": "tel:+48792241336"
-      }
-    ]
+    "rzecznik_czka": "Daniel Tokar",
+    "rzecz.Płeć": "m",
+    "rzecz.Tel": "tel:+48792241336"
   },
-  "Okręg Karkonosko-Izerski": {
-    "name": "Okręg Karkonosko-Izerski",
-    "miasto": "Karkonosze i Izery",
-    "www": "http://oki.partiarazem.pl/",
-    "fb": "https://www.facebook.com/razem.oki/",
-    "mailto": ""
+  {
+    "województwo": "dolnośląskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Wrocławski",
+    "miasto": "Wrocław",
+    "www": "http://wroclaw.partiarazem.pl/",
+    "fb": "https://www.facebook.com/razem.wroclaw/",
+    "twitter": "https://twitter.com/RazemWroclaw",
+    "mailto": "wroclaw@partiarazem.pl",
+    "adres": "Partia Razem\nBiuro Okręgu Wrocławskiego\nSpołem PSS „Feniks”\n ul. Szewska 75/77 LU34\n 50-121 Wrocław",
+    "rzecznik_czka": "Magdalena Owczarek",
+    "rzecz.Płeć": "k",
+    "rzecz.Tel": "tel:+48695669240"
   },
-  "Okręg Toruński": {
-    "name": "Okręg Toruński",
+  {
+    "województwo": "kujawsko-pomorskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Bydgoski",
+    "miasto": "Bydgoszcz",
+    "fb": "https://www.facebook.com/razembydgoszcz/",
+    "mailto": "razem.kujawy@gmail.com",
+    "rzecznik_czka": "Karolina Kozłowska",
+    "rzecz.Płeć": "k",
+    "rzecz.Tel": "tel:+48517770519"
+  },
+  {
+    "województwo": "kujawsko-pomorskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Toruński",
     "miasto": "Toruń, Włocławek",
     "www": "http://torun.partiarazem.pl/",
     "fb": "http://www.facebook.com/razemtorun/",
     "mailto": "razem.torun@gmail.com",
-    "kontakt": [
-      {
-        "role": "Rzecznik Prasowy: Adrian Stelmaszyk",
-        "tel": "tel:+48694056428"
-      }
-    ]
+    "rzecznik_czka": "Adrian Stelmaszyk",
+    "rzecz.Płeć": "m",
+    "rzecz.Tel": "tel:+48694056428"
   },
-  "Okręg Bydgoski": {
-    "name": "Okręg Bydgoski",
-    "miasto": "Bydgoszcz",
-    "fb": "https://www.facebook.com/razembydgoszcz/",
-    "mailto": "razem.kujawy@gmail.com",
-    "kontakt": [
-      {
-        "role": "Rzeczniczka Prasowa: Karolina Kozłowska",
-        "tel": "tel:+48517770519"
-      }
-    ]
-  },
-  "Okręg Lubelski": {
-    "name": "Okręg Lubelski",
+  {
+    "województwo": "lubelskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Lubelski",
     "miasto": "Lublin",
     "www": "http://lublin.partiarazem.pl/",
     "fb": "https://www.facebook.com/razem.lubelskie/",
     "mailto": "razem.lubelskie@gmail.com ",
     "adres": "Centrum Społeczne Razem\nSzewska 1\n20-400 Lublin",
-    "kontakt": [
-      {
-        "role": "Rzecznik Prasowy: Tomasz Warzocha",
-        "tel": "tel:+48660479845"
-      }
-    ]
+    "koord.Tel": "tel:+48660479845"
   },
-  "Okręg Gorzowski": {
-    "name": "Okręg Gorzowski",
+  {
+    "województwo": "lubuskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Gorzowski",
     "miasto": "Gorzów Wielkopolski",
-    "mailto": "razem.gorzow@gmail.com",
-    "fb": "https://www.facebook.com/RazemGorzow"
+    "fb": "https://www.facebook.com/RazemGorzow",
+    "twitter": "https://twitter.com/RazemGorzow",
+    "mailto": "razem.gorzow@gmail.com"
   },
-  "Okręg Zielonogórski": {
-    "name": "Okręg Zielonogórski",
+  {
+    "województwo": "lubuskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Zielonogórski",
     "miasto": "Zielona Góra",
     "fb": "https://www.facebook.com/RazemLubuskie",
+    "twitter": "https://twitter.com/RazemZielGora",
     "mailto": "razem.zielonagora@gmail.com",
-    "kontakt": [
-      {
-        "role": "Rzecznik Prasowy: Dawid Kotlarek",
-        "tel": "tel:+48600003978"
-      },
-      {
-        "role": "Koordynator: Piotr Herrmann-Jankowski",
-        "tel": "tel:+48516738418"
-      }
-    ]
+    "koordynator_ka": "Piotr Herrmann-Jankowski",
+    "koord.Płeć": "m",
+    "koord.Tel": "tel:+48600003978"
   },
-  "Okręg Łódzki": {
-    "name": "Okręg Łódzki",
+  {
+    "województwo": "łódzkie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Łódzki",
     "miasto": "Łódź",
     "www": "http://lodz.partiarazem.pl/",
-    "fb": "https://www.facebook.com/razem.skierniewice/",
+    "twitter": "https://twitter.com/razemlodzkie",
     "mailto": "lodzkie@partiarazem.pl",
-    "kontakt": [
-      {
-        "role": "Rzecznik prasowy: Michał Rachalewski",
-        "tel": "tel:+48793178855"
-      },
-      {
-        "role": " Koordynator: Jakub Klimczak",
-        "tel": "tel:+48661093639"
-      }
-    ],
     "adres": "Partia Razem\nBiuro Okręgu Łódzkiego\nPiotrkowska 88 LU11\n90-103 Łódź",
-    "sub": [ "Piotrków Trybunalski"]
+    "koordynator_ka": "Jakub Klimczak",
+    "koord.Płeć": "m",
+    "koord.Tel": "tel:+48793178855"
   },
-  "Piotrków Trybunalski": {
-    "miasto": "Piotrków Trybunalski",
-    "kontakt": [
-      {
-        "role": "Koordynatorka: Monika Sulka",
-        "tel": "tel:+48511715771"
-      }
-    ]
-  },
-  "Okręg Skierniewicki": {
-    "name": "Okręg Skierniewicki",
-    "mailto": "razem.skierniewice@gmail.com",
+  {
+    "województwo": "łódzkie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Skierniewicki",
     "miasto": "Skierniewice",
-    "fb": "https://www.facebook.com/razem.skierniewice/"
+    "fb": "https://www.facebook.com/razem.skierniewice/",
+    "mailto": "razem.skierniewice@gmail.com"
   },
-  "Okręg Krakowski": {
-    "name": "Okręg Krakowski",
-    "sub": ["Nowy Sącz"],
+  {
+    "województwo": "łódzkie",
+    "typ": "Koło",
+    "nazwa": "Koło Razem",
+    "miasto": "Piotrków Trybunalski",
+    "okręgNadrzędny": "Okręg Łódzki",
+    "koordynator_ka": "Monika Sulka",
+    "koord.Płeć": "k",
+    "koord.Tel": "tel:+48511715771"
+  },
+  {
+    "województwo": "małopolskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Krakowski",
     "miasto": "Kraków",
     "www": "http://partiarazem.pl/krakow",
     "fb": "https://www.facebook.com/razemmalopolska/",
+    "twitter": "https://twitter.com/razemmalopolska",
     "mailto": "razem.krakow.zarzad@gmail.com",
     "adres": "Partia Razem\nBiuro Okręgu Krakowskiego\nSpółdzielnia Ogniwo\nul. Paulińska 28\n31-065 Kraków"
   },
-   "Nowy Sącz": {
-    "name": "Koło Razem",
-    "miasto": "Nowy Sącz",
-    "fb": "https://www.facebook.com/RazemNowySacz/"
-  },
-  "Okręg Tarnowski": {
-    "name": "Okręg Tarnowski",
+  {
+    "województwo": "małopolskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Tarnowski",
     "miasto": "Tarnów",
     "www": "http://partiarazem.pl/tarnow",
     "fb": "https://www.facebook.com/razemtarnow",
+    "twitter": "https://twitter.com/RazemSWI",
     "mailto": "tarnow@partiarazem.pl",
-    "kontakt": [
-      {
-        "role": "Rzecznik Prasowy: Przemysław Łyczko",
-        "tel": "tel:+48795130949"
-      }
-    ]
+    "rzecznik_czka": "Przemysław Łyczko",
+    "rzecz.Płeć": "m",
+    "rzecz.Tel": "tel:+48795130949"
   },
-  "Okręg Warszawski": {
-    "name": "Okręg Warszawski",
-    "sub": ["Legionowo, Nowy Dwór Mazowiecki", "Płock"],
-    "miasto": "Warszawa",
-    "www": "http://warszawa.partiarazem.pl/",
-    "fb": "https://www.facebook.com/RazemwWarszawie/",
-    "twitter": "RazemWarszawa",
-    "mailto": "warszawa@partiarazem.pl",
-    "kontakt": [
-      {
-        "role": "Rzecznik prasowy: Mateusz Olechowski",
-        "tel": "tel:+48780148502"
-      }
-    ],
-    "adres": "Partia Razem\nBiuro Okręgu Warszawskiego\n ul. Jezierskiego 7/LU 1\n 00-457 Warszawa"
+  {
+    "województwo": "małopolskie",
+    "typ": "Koło",
+    "nazwa": "Koło Razem",
+    "miasto": "Nowy Sącz",
+    "okręgNadrzędny": "Okręg Krakowski",
+    "fb": "https://www.facebook.com/RazemNowySacz/"
   },
-   "Legionowo, Nowy Dwór Mazowiecki": {
-    "name": "Koło Razem",
-    "miasto": "Legionowo, Nowy Dwór Mazowiecki",
-    "mailto": "razem.legionowonowydwor@gmail.com",
-    "kontakt": [
-      {
-        "role": "koordynator: Mateusz Szymański",
-        "tel": "tel:+48660267733"
-      }
-    ]
-  },
-  "Płock": {
-    "name": "Koło Razem",
-    "miasto": "Płock",
-    "fb": "https://www.facebook.com/Razem.Plock/",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "koordynator: Mateusz Dobrowolski",
-        "tel": "tel:+48792024754"
-      }
-    ]
-  },
-  "Okręg Grójecko-Piaseczyński": {
-    "name": "Okręg Grójecko-Piaseczyński",
+  {
+    "województwo": "mazowieckie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Grójecko-Piaseczyński",
     "miasto": "Grójec, Piaseczno",
     "fb": "https://www.facebook.com/razem.gp/",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Rzecznik prasowy: Marek Posiadała",
-        "tel": "tel:+48502222798"
-      }
-    ]
+    "instagram": "https://www.instagram.com/razem.grojecpiaseczno/",
+    "koord.Tel": "tel:+48502222798"
   },
-  "Okręg Mazowsze Zachodnie": {
-    "name": "Okręg Mazowsze Zachodnie",
-    "sub": ["Żyrardów"],
+  {
+    "województwo": "mazowieckie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Mazowsze Zachodnie",
     "miasto": "Pruszków, Grodzisk Mazowiecki",
     "www": "http://mazowsze-zach.partiarazem.pl/",
     "fb": "https://www.facebook.com/razem.mz/",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Rzecznik Prasowy: Przemysław Nowak",
-        "tel": "tel:+48607313356"
-      }
-    ]
+    "rzecznik_czka": "Przemysław Nowak",
+    "rzecz.Płeć": "m",
+    "rzecz.Tel": "tel:+48607313356"
   },
-  "Żyrardów": {
-    "name": "Koło Razem",
-    "miasto": "Żyrardów",
-    "kontakt": [
-      {
-        "role": "Koordynator: Zbigniew Hakobert",
-        "tel": "tel:+48692696027"
-      }
-    ]
-  },
-  "Okręg Opolski": {
-    "name":"Okręg Opolski", 
-    "miasto": "Opole",
-    "www": "http://opole.partiarazem.pl/",
-    "fb": "https://www.facebook.com/razemopolskie/",
-    "kontakt": [
-      {
-        "role": "Rzecznik Prasowy: Michał Pytlik",
-        "tel": "tel:+48602780773"
-      }
-    ],
-    "sub": ["Kędzierzyn-Koźle"]
-  },
-  "Kędzierzyn-Koźle": {
-    "name": "Koło Razem",
-    "miasto": "Kędzierzyn-Koźle",
-    "fb": "https://www.facebook.com/razemkedzierzynkozle/",
-    "kontakt": [
-      {
-        "role": "Koordynatorka: Sabina Faron",
-        "tel": "tel:+48530265550"
-      }
-    ]
-  },
-  "Okręg Radomski": {
-    "name": "Okręg Radomski",
+  {
+    "województwo": "mazowieckie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Radomski",
     "miasto": "Radom",
     "www": "http://radom.partiarazem.pl/",
     "fb": "https://www.facebook.com/razemradom/",
     "mailto": "razem.radom@gmail.com",
-    "kontakt": [
-      {
-        "role": "Rzeczniczka Prasowa: Justyna Kosiec",
-        "tel": "tel:+48502222798"
-      }
-    ]
+    "rzecznik_czka": "Justyna Kosiec",
+    "rzecz.Płeć": "k",
+    "rzecz.Tel": "tel:+48502222798"
   },
-  "Okręg Rzeszowski": {
-    "name": "Okręg Rzeszowski",
+  {
+    "województwo": "mazowieckie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Warszawski",
+    "miasto": "Warszawa",
+    "www": "http://warszawa.partiarazem.pl/",
+    "fb": "https://www.facebook.com/RazemwWarszawie/",
+    "twitter": "https://twitter.com/RazemWarszawa",
+    "mailto": "warszawa@partiarazem.pl",
+    "adres": "Partia Razem\nBiuro Okręgu Warszawskiego\n ul. Jezierskiego 7/LU 1\n 00-457 Warszawa",
+    "koord.Tel": "tel:+48780148502"
+  },
+  {
+    "województwo": "mazowieckie",
+    "typ": "Koło",
+    "nazwa": "Koło Razem",
+    "miasto": "Legionowo, Nowy Dwór Mazowiecki",
+    "okręgNadrzędny": "Okręg Warszawski",
+    "mailto": "razem.legionowonowydwor@gmail.com",
+    "koord.Tel": "tel:+48660267733"
+  },
+  {
+    "województwo": "mazowieckie",
+    "typ": "Koło",
+    "nazwa": "Koło Razem",
+    "miasto": "Płock",
+    "okręgNadrzędny": "Okręg Warszawski",
+    "fb": "https://www.facebook.com/Razem.Plock/",
+    "koord.Tel": "tel:+48792024754"
+  },
+  {
+    "województwo": "mazowieckie",
+    "typ": "Koło",
+    "nazwa": "Koło Razem",
+    "miasto": "Żyrardów",
+    "okręgNadrzędny": "Okręg Mazowsze Zachodnie",
+    "koordynator_ka": "Zbigniew Hakobert",
+    "koord.Płeć": "m",
+    "koord.Tel": "tel:+48692696027"
+  },
+  {
+    "województwo": "opolskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Opolski",
+    "miasto": "Opole",
+    "www": "http://opole.partiarazem.pl/",
+    "fb": "https://www.facebook.com/razemopolskie/",
+    "twitter": "https://twitter.com/RazemOpolskie",
+    "rzecznik_czka": "Michał Pytlik",
+    "rzecz.Płeć": "m",
+    "rzecz.Tel": "tel:+48602780773"
+  },
+  {
+    "województwo": "opolskie",
+    "typ": "Koło",
+    "nazwa": "Koło Razem",
+    "miasto": "Kędzierzyn-Koźle",
+    "okręgNadrzędny": "Okręg Opolski",
+    "fb": "https://www.facebook.com/razemkedzierzynkozle/",
+    "koord.Tel": "tel:+48530265550"
+  },
+  {
+    "województwo": "podkarpackie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Bieszczadzki",
+    "miasto": "Sanok",
+    "www": "http://bieszczady.partiarazem.pl/",
+    "fb": "https://www.facebook.com/razembieszczady/",
+    "youtube": "https://www.youtube.com/channel/UCZoGAo6FzinevFfL_lzQxgw",
+    "rzecznik_czka": "Tadeusz Świec",
+    "rzecz.Płeć": "m",
+    "rzecz.Tel": "tel:+48733271482"
+  },
+  {
+    "województwo": "podkarpackie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Mielecki",
+    "miasto": "Mielec",
+    "fb": "https://www.facebook.com/razem.mielec/"
+  },
+  {
+    "województwo": "podkarpackie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Przemyski",
+    "miasto": "Przemyśl",
+    "fb": "https://www.facebook.com/razemprzemysl/",
+    "rzecznik_czka": "Łukasz Stebnicki",
+    "rzecz.Płeć": "m",
+    "rzecz.Tel": "tel:+48665208176"
+  },
+  {
+    "województwo": "podkarpackie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Rzeszowski",
     "miasto": "Rzeszów",
     "fb": "https://www.facebook.com/razem.podkarpackie/",
     "mailto": "razem.podkarpackie@gmail.com",
     "adres": "Partia Razem\nBiuro Okręgu Podkarpackiego\n Plac Wolności 15a\n 35-073 Rzeszów"
   },
-  "Okręg Mielecki": {
-    "name": "Okręg Mielecki",
-    "miasto": "Mielec",
-    "mailto": "",
-    "fb": "https://www.facebook.com/razem.mielec/"
-  },
-  "Okręg Przemyski": {
-    "name": "Okręg Przemyski",
-    "miasto": "Przemyśl",
-    "fb": "https://www.facebook.com/razemprzemysl/",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Rzecznik Prasowy: Łukasz Stebnicki",
-        "tel": "tel:+48665208176"
-      }
-    ]
-  },
-  "Okręg Bieszczadzki": {
-    "name": "Okręg Bieszczadzki",
-    "miasto": "Sanok",
-    "www": "http://bieszczady.partiarazem.pl/",
-    "fb": "https://www.facebook.com/razembieszczady/",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Rzecznik Prasowy: Tadeusz Świec",
-        "tel": "tel:+48733271482"
-      }
-    ]
-  },
-  "Okręg Białostocki": {
-    "name": "Okręg Białostocki",
+  {
+    "województwo": "podlaskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Białostocki",
     "miasto": "Białystok",
     "www": "http://podlaskie.partiarazem.pl/kontakt/",
     "fb": "https://www.facebook.com/razempodlaskie",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Rzeczniczka Prasowa: Justyna Rembiszewska",
-        "tel": "tel:+48510322526"
-      }
-    ],
-    "adres": "Partia Razem \nBiuro Okręgu Podlaskiego \nul. Lipowa 4, lok. 204a \n15-427 Białystok"
+    "adres": "Partia Razem \nBiuro Okręgu Podlaskiego \nul. Lipowa 4, lok. 204a \n15-427 Białystok",
+    "rzecznik_czka": "Justyna Rembiszewska",
+    "rzecz.Płeć": "k",
+    "rzecz.Tel": "tel:+48510322526"
   },
-  "Okręg Gdański": {
-    "name": "Okręg Gdański",
-    "kontakt": [
-      {
-        "role": "Rzeczniczka Prasowa: Barbara Brzezicka",
-        "tel": "tel:+48605749885"
-      }
-    ],
+  {
+    "województwo": "pomorskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Gdański",
     "miasto": "Gdańsk",
     "www": "http://partiarazem.pl/gdansk",
-    "mailto": "",
-    "adres": "Partia Razem\nBiuro Okręgu Gdańskiego\nal. Grunwaldzka 76/78, lokal 217 (II piętro)\n80-244 Gdańsk"
+    "adres": "Partia Razem\nBiuro Okręgu Gdańskiego\nal. Grunwaldzka 76/78, lokal 217 (II piętro)\n80-244 Gdańsk",
+    "rzecznik_czka": "Barbara Brzezicka",
+    "rzecz.Płeć": "k",
+    "rzecz.Tel": "tel:+48605749885"
   },
-  "Okręg Gdyński": {
-    "name": "Okręg Gdyński",
-    "kontakt": [
-      {
-        "role": "Rzeczniczka Prasowa: Barbara Brzezicka",
-        "tel": "tel:+48605749885"
-      }
-    ],
+  {
+    "województwo": "pomorskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Gdyński",
     "miasto": "Gdynia",
     "www": "http://partiarazem.pl/gdynia",
-    "mailto": "",
-    "adres": "Partia Razem \nBiuro Okręgu Gdyńskiego \nul. Wielkopolska 42/2 \n81-552 Gdynia\notwarte dwa dni w tygodniu"
+    "youtube": "https://www.youtube.com/channel/UC7cVUZ_PiAeGsMyRUQvOv_g",
+    "adres": "Partia Razem \nBiuro Okręgu Gdyńskiego \nul. Wielkopolska 42/2 \n81-552 Gdynia",
+    "godziny": "otwarte dwa dni w tygodniu",
+    "rzecznik_czka": "Barbara Brzezicka",
+    "rzecz.Płeć": "k",
+    "rzecz.Tel": "tel:+48605749885"
   },
-  "Okręg Słupski": {
-    "name": "Okręg Słupski",
+  {
+    "województwo": "pomorskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Słupski",
     "miasto": "Słupsk",
-    "mailto": "",
     "www": "http://partiarazem.pl/slupsk"
   },
-  "Okręg Podbeskidzie": {
-    "name": "Okręg Podbeskidzie",
-    "sub": ["Cieszyn", "Żywiec"],
-    "miasto": "Bielsko-Biała",
-    "www": "http://podbeskidzie.partiarazem.pl/",
-    "fb": "https://www.facebook.com/RazemPodbeskidzie/",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Rzecznik Prasowy: Jarosław Hess",
-        "tel": "tel:+48737813897"
-      }
-    ],
-    "adres": "Partia Razem\nBiuro Okręgu Podbeskidzie\nul. Barlickiego 22,\n43–300 Bielsko–Biała"
-  },
-  "Cieszyn": {
-    "miasto": "Cieszyn",
-    "kontakt": [
-      {
-        "role": "Koordynatorka: Agnieszka Lamek–Kochanowska",
-        "tel": "tel:+48697797908"
-      }
-    ]
-  },
-  "Żywiec":  {
-    "miasto": "Żywiec",
-    "mailto": "razem.zywiec@gmail.com"
-  },
-  "Okręg Częstochowski": {
-    "name": "Okręg Częstochowski",
+  {
+    "województwo": "śląskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Częstochowski",
     "miasto": "Częstochowa",
     "www": "http://czestochowa.partiarazem.pl/",
     "fb": "https://www.facebook.com/razemczestochowa/",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Koordynator: Martin Saczek",
-        "tel": "tel:+48660315498"
-      }
-    ]
+    "twitter": "https://twitter.com/RazemCzewa",
+    "koordynator_ka": "Martin Saczek",
+    "koord.Płeć": "m",
+    "koord.Tel": "tel:+48660315498"
   },
-  "Okręg Katowicki": {
-    "name": "Okręg Katowicki",
-    "sub": ["Rybnik"],
+  {
+    "województwo": "śląskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Katowicki",
     "miasto": "Katowice, Gliwice, Zabrze",
     "www": "http://partiarazem.pl/katowice",
     "fb": "https://www.facebook.com/razem.slask",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Rzeczniczka Prasowa: Arnika Kluska",
-        "tel": "tel:+48795924816"
-      }
-    ],
-    "adres": "Partia Razem\nBiuro Śląskie\n ul. Andrzeja 13/1\n 40-061 Katowice"
+    "adres": "Partia Razem\nBiuro Śląskie\n ul. Andrzeja 13/1\n 40-061 Katowice",
+    "rzecznik_czka": "Arnika Kluska",
+    "rzecz.Płeć": "k",
+    "rzecz.Tel": "tel:+48795924816"
   },
-  "Rybnik": {
-        "miasto": "Rybnik, Jastrzębie Zdrój, Racibórz",
-        "kontakt": [
-          {
-            "role": "Rzeczniczka Prasowa: Patrycja Nowara",
-            "tel": "tel:+48693110593"
-          }
-        ]
+  {
+    "województwo": "śląskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Podbeskidzie",
+    "miasto": "Bielsko-Biała",
+    "www": "http://podbeskidzie.partiarazem.pl/",
+    "fb": "https://www.facebook.com/RazemPodbeskidzie/",
+    "adres": "Partia Razem\nBiuro Okręgu Podbeskidzie\nul. Barlickiego 22,\n43–300 Bielsko–Biała",
+    "rzecznik_czka": "Jarosław Hess",
+    "rzecz.Płeć": "m",
+    "rzecz.Tel": "tel:+48737813897"
   },
-  "Okręg Sosnowiecki": {
-    "name": "Okręg Sosnowiecki",
+  {
+    "województwo": "śląskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Sosnowiecki",
     "miasto": "Sosnowiec",
     "www": "http://sosnowiec.partiarazem.pl/",
     "fb": "https://www.facebook.com/razem.zaglebie/",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Rzecznik Prasowy: Jakub Tesluk",
-        "tel": "tel:+48512992599"
-      }
-    ],
-    "adres": "Partia Razem\nBiuro Okręgu Sosnowieckiego\nal. Zwycięstwa 3/34\n41-200 Sosnowiec"
+    "adres": "Partia Razem\nBiuro Okręgu Sosnowieckiego\nal. Zwycięstwa 3/34\n41-200 Sosnowiec",
+    "rzecznik_czka": "Jakub Tesluk",
+    "rzecz.Płeć": "m",
+    "rzecz.Tel": "tel:+48512992599"
   },
-  "Okręg Świętokrzyski": {
-    "name": "Okręg Świętokrzyski",
+  {
+    "województwo": "śląskie",
+    "typ": "Obszar",
+    "nazwa": "Cieszyn",
+    "miasto": "Cieszyn",
+    "okręgNadrzędny": "Okręg Podbeskidzie",
+    "koordynator_ka": "Agnieszka Lamek–Kochanowska",
+    "koord.Płeć": "k",
+    "koord.Tel": "tel:+48697797908"
+  },
+  {
+    "województwo": "śląskie",
+    "typ": "Obszar",
+    "nazwa": "Rybnik",
+    "miasto": "Rybnik, Jastrzębie Zdrój, Racibórz",
+    "okręgNadrzędny": "Okręg Katowicki",
+    "rzecznik_czka": "Patrycja Nowara",
+    "rzecz.Płeć": "k",
+    "rzecz.Tel": "tel:+48693110593"
+  },
+  {
+    "województwo": "śląskie",
+    "typ": "Obszar",
+    "nazwa": "Żywiec",
+    "miasto": "Żywiec",
+    "okręgNadrzędny": "Okręg Podbeskidzie",
+    "mailto": "razem.zywiec@gmail.com"
+  },
+  {
+    "województwo": "świętokrzyskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Świętokrzyski",
     "miasto": "Kielce",
     "www": "http://kielce.partiarazem.pl/",
     "fb": "https://www.facebook.com/swietokrzyskie.razem",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Koordynator: Łukasz Kosmala",
-        "tel": "tel:+48605098552"
-      }
-    ],
-    "adres": "Partia Razem\nBiuro Okręgu Świętokrzyskiego\nBecher Platinum, \nAleja IX Wieków Kielc 6/8\n25-516 Kielce\ndyżury: piątek 18:00 – 20:00"
+    "adres": "Partia Razem\nBiuro Okręgu Świętokrzyskiego\nBecher Platinum, \nAleja IX Wieków Kielc 6/8\n25-516 Kielce\n",
+    "godziny": "dyżury: piątek 18:00 – 20:00",
+    "koordynator_ka": "Łukasz Kosmala",
+    "koord.Płeć": "m",
+    "koord.Tel": "tel:+48605098552"
   },
-  "Okręg Olsztyński": {
-    "name": "Okręg Olsztyński",
+  {
+    "województwo": "warmińsko-mazurskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Olsztyński",
     "miasto": "Olsztyn",
-    "kontakt": [
-      {
-        "role": "Rzeczniczka Prasowa: Małgorzata Matuszewska-Boruc",
-        "tel": "tel:+48793131261"
-      }
-    ],
     "www": "http://partiarazem.pl/olsztyn/",
     "fb": "https://www.facebook.com/razemwarminskomazurskie/",
-    "adres": "Partia Razem\nBiuro Okręgu Warmińsko-Mazurskiego\nIzba Rzemiosła\nul. Kołłątaja 5, lok. 321 [III piętro]\n10-034 Olsztyn\notwarte:\nwtorki – 15:30-19:00\nczwartki – 10:30-12:30",
-    "sub": ["Elbląg"]
+    "adres": "Partia Razem\nBiuro Okręgu Warmińsko-Mazurskiego\nIzba Rzemiosła\nul. Kołłątaja 5, lok. 321 [III piętro]\n10-034 Olsztyn\n",
+    "godziny": "otwarte:\nwtorki – 15:30-19:00\nczwartki – 10:30-12:30",
+    "rzecznik_czka": "Małgorzata Matuszewska-Boruc",
+    "rzecz.Płeć": "k",
+    "rzecz.Tel": "tel:+48793131261"
   },
-  "Elbląg": {
+  {
+    "województwo": "warmińsko-mazurskie",
+    "typ": "Obszar",
+    "nazwa": "Elbląg",
     "miasto": "Elbląg",
+    "okręgNadrzędny": "Okręg Olsztyński",
     "mailto": "razem.elblag@gmail.com",
-    "kontakt": [
-      {
-        "role": "Koordynator: Marcin Gulczyński",
-        "tel": "tel:+48790568147"
-      }
-    ]
+    "koordynator_ka": "Marcin Gulczyński",
+    "koord.Płeć": "m",
+    "koord.Tel": "tel:+48790568147"
   },
-  "Okręg Poznański": {
-    "name": "Okręg Poznański",
-    "sub": ["Gniezno", "Piła"],
-    "miasto": "Poznań",
-    "www": "http://partiarazem.pl/poznan",
-    "fb": "https://www.facebook.com/razempoznan/",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Rzecznik Prasowy: Amadeusz Smirnow",
-        "tel": "tel:+48602454488"
-      }
-    ],
-    "adres": "Partia Razem\nBiuro Okręgu Poznańskiego\nul. Klasztorna 24/25 \n61-779 Poznań"
-  },
-  "Gniezno": {
-    "name": "Koło Razem",
-    "miasto": "Gniezno",
-    "fb": "https://www.facebook.com/razemgniezno/"
-  },
-  "Piła": {
-    "name": "Koło Razem",
-    "miasto": "Piła",
-    "fb": "https://www.facebook.com/razempila",
-    "kontakt": [
-      {
-        "role": "Koordynator: Bocian Kamil",
-        "tel": "tel:+48504356304"
-      }
-    ]
-  },
-  "Okręg Kaliski": {
-    "name": "Okręg Kaliski",
+  {
+    "województwo": "wielkopolskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Kaliski",
     "miasto": "Kalisz",
     "fb": "https://www.facebook.com/razemkalisz"
   },
-  "Okręg Koniński": {
-    "name": "Okręg Koniński",
+  {
+    "województwo": "wielkopolskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Koniński",
     "miasto": "Konin",
     "fb": "https://www.facebook.com/razemkonin",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Koordynator: Krzysztof Wojczewski",
-        "tel": "tel:+48690322040"
-      }
-    ]
+    "koordynator_ka": "Krzysztof Wojczewski",
+    "koord.Płeć": "m",
+    "koord.Tel": "tel:+48690322040"
   },
-  "Okręg Koszaliński": {
-    "name": "Okręg Koszaliński",
+  {
+    "województwo": "wielkopolskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Poznański",
+    "miasto": "Poznań",
+    "www": "http://partiarazem.pl/poznan",
+    "fb": "https://www.facebook.com/razempoznan/",
+    "adres": "Partia Razem\nBiuro Okręgu Poznańskiego\nul. Klasztorna 24/25 \n61-779 Poznań",
+    "rzecznik_czka": "Amadeusz Smirnow",
+    "rzecz.Płeć": "m",
+    "rzecz.Tel": "tel:+48602454488"
+  },
+  {
+    "województwo": "wielkopolskie",
+    "typ": "Koło",
+    "nazwa": "Koło Razem",
+    "miasto": "Gniezno",
+    "okręgNadrzędny": "Okręg Poznański",
+    "fb": "https://www.facebook.com/razemgniezno/"
+  },
+  {
+    "województwo": "wielkopolskie",
+    "typ": "Koło",
+    "nazwa": "Koło Razem",
+    "miasto": "Piła",
+    "okręgNadrzędny": "Okręg Poznański",
+    "fb": "https://www.facebook.com/razempila",
+    "koord.Tel": "tel:+48504356304"
+  },
+  {
+    "województwo": "zachodniopomorskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Koszaliński",
     "miasto": "Koszalin",
     "mailto": "razem.koszalin@gmail.com"
   },
-  "Okręg Szczeciński": {
-    "name": "Okręg Szczeciński",
+  {
+    "województwo": "zachodniopomorskie",
+    "typ": "Okręg",
+    "nazwa": "Okręg Szczeciński",
     "miasto": "Szczecin",
     "www": "http://szczecin.partiarazem.pl/",
     "fb": "https://www.facebook.com/partia.razem.szczecin",
-    "mailto": "",
-    "kontakt": [
-      {
-        "role": "Rzecznik prasowy: Dariusz Litkiewicz",
-        "tel": "tel:+48500864304"
-      },
-      {
-        "role": " Sprawy członkowskie: Sebastian Bednarski",
-        "tel": "tel:+48502375011"
-      }
-    ],
-    "adres": "Partia Razem\nBiuro Okręgu Szczecińskiego\nKoński Kierat 14-15\n70-563 Szczecin"
+    "adres": "Partia Razem\nBiuro Okręgu Szczecińskiego\nKoński Kierat 14-15\n70-563 Szczecin",
+    "koord.Tel": "tel:+48500864304"
   }
-}
+]

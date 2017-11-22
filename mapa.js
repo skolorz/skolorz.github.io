@@ -58,7 +58,7 @@ var styles = {};
     function showOkreg($okreg, dane, feature) {
         var elem;
 
-        $okreg.find("#nazwa").text(dane.name);
+        $okreg.find("#nazwa").text(dane.nazwa);
         if (dane.adres){
             $okreg.find("#adres").html(dane.adres.replace(/(?:\r\n|\r|\n)+/g, "<br />"));
         }
@@ -93,18 +93,27 @@ var styles = {};
 
             $okreg.find("#linki").append(elem);
         }
-        if (dane.kontakt && dane.kontakt.length){
-            dane.kontakt.forEach(k => {
-                elem = document.createElement("span");
-                elem.innerText = k.role +", ";
-                $okreg.find("#kontakty").append(elem);
+        if (dane["koord.Tel"]){
+            elem = document.createElement("span");
+            elem.innerText = (dane["koord.Płeć"] === "k" ? "Koordynatorka: ": "Koordynator: ") + (dane.rzecznik_czka ||"") + " ";
+            $okreg.find("#kontakty").append(elem);
 
-                elem = document.createElement("a");
-                elem.href = k.tel;
-                elem.text = k.tel;
-                $okreg.find("#kontakty").append(elem);
-                $okreg.find("#kontakty").append("<br/>");
-            } );
+            elem = document.createElement("a");
+            elem.href = dane["koord.Tel"];
+            elem.text = dane["koord.Tel"];
+            $okreg.find("#kontakty").append(elem);
+            $okreg.find("#kontakty").append("<br/>");
+        }
+        if (dane["rzecz.Tel"]){
+            elem = document.createElement("span");
+            elem.innerText = (dane["rzecz.Płeć"] === "k" ? "Rzeczniczka prasowa: ": "Rzecznik prasowy: ") + dane.rzecznik_czka + " ";
+            $okreg.find("#kontakty").append(elem);
+
+            elem = document.createElement("a");
+            elem.href = dane["rzecz.Tel"];
+            elem.text = dane["rzecz.Tel"];
+            $okreg.find("#kontakty").append(elem);
+            $okreg.find("#kontakty").append("<br/>");
         }
         if (feature && feature.properties.powiaty.length){
                 $okreg.find("#powiaty").append("<small>powiaty: " + feature.properties.powiaty.join(", ") + "</small>");
@@ -136,16 +145,20 @@ var styles = {};
 
         $okreg =  $("#okreg");
         $okreg.children().empty();
+        let name = target.feature.properties.name;
+        dane = daneAdresowe.filter(o => o.nazwa === ("Okręg " + name) || 
+                o.nazwa === name ||
+                o.miasto === name
+                ).pop();
 
-        dane = daneAdresowe["Okręg " + target.feature.properties.name] || daneAdresowe[target.feature.properties.name];
         if (dane){
-            if (dane.sub && dane.sub.length) {
-                var subElements = dane.sub
+            if (dane.typ === "Okręg") {
+                let subElements = daneAdresowe.filter(o => o["okręgNadrzędny"] === dane["nazwa"])
                     .map(s => { 
                         var el = $okreg.clone(true, true); 
-                        el.attr("id", s);
+                        el.attr("id", s.nazwa);
                         return {
-                            dane: daneAdresowe[s],
+                            dane: s,
                             el: el
                         }
                     });
