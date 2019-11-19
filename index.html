@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+path {
+  fill: #fff;
+  stroke: #870f57;
+  stroke-width: 2px;
+}
+  
+circle {
+  fill: #fff;
+  fill-opacity: 0.4;
+  stroke: #111;
+}
+
+path.active {
+  fill: pink;
+}
+
+
+</style>
+<body>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/topojson.v2.min.js"></script>
+  <script src="https://unpkg.com/textures@1.2.0/dist/textures.js"></script>
+
+<script>
+
+var width = 960,
+    height = 500;
+
+
+var svg = d3.select("body")
+  .append("svg");
+
+var t = textures.lines()
+  .orientation("vertical")
+  .strokeWidth(1)
+  .shapeRendering("crispEdges");
+svg.call(t);
+
+svg.append("circle")
+	.style("fill", t.url());
+
+    svg.attr("width", width)
+        .attr("height", height)
+
+var url = "./gminy.geo.json"
+
+d3.json(url, function(error, gminy) {
+    window.gminy = gminy
+ console.log(gminy) 
+    let geoData = topojson.topology(gminy)
+
+    var projection = d3.geoMercator().fitSize([width, height], gminy)
+  
+    var path = d3.geoPath().projection(projection)
+
+    svg.selectAll("path")
+    .data(gminy.features)
+      .enter().append("path")
+    .attr("d", path)
+    .attr("fill", t.url())
+    .on("mouseover",function(d) {
+    	d3.select(this)
+      	.classed("active",true)
+  	})
+  	.on("mouseout",function(d){
+    	d3.select(this)
+      	.classed("active",false)
+    })
+
+});
+
+</script>
+<div id="example"></div>
+
+</body>
